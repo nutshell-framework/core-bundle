@@ -24,12 +24,6 @@
   "autoload":{
     "psr-4": {
       "ContaoNutshellFramework\\Core\\": "src/"
-    },
-    "classmap": [
-      "src/Resources/contao/"
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/templates/"
-    ]
+    }
   }
 }
