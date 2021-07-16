@@ -25,5 +25,8 @@
     "psr-4": {
       "ContaoNutshell\\Framework\\": "src/"
     }
+  },
+  "extra": {
+        "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin"
   }
 }
