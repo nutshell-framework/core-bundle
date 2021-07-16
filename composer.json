@@ -27,9 +27,7 @@
     }
   },
   "extra": {
-    "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin"
-  },
-  "config": {
-    "component-dir": "web/test"
+    "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin",
+    "contao-component-dir": "web/test"
   }
 }
