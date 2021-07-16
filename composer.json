@@ -27,6 +27,6 @@
     }
   },
   "extra": {
-        "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin"
   }
 }
