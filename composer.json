@@ -2,7 +2,7 @@
   "name": "erdmannfreunde/contao-nutshell-framework",
   "description": "Base Framework for Contao CMS",
   "keywords": ["contao", "nutshell", "euf nutshell", "base framework"],
-  "type": "contao-bundle",
+  "type": "contao-component",
   "homepage": "https://github.com/ErdmannFreunde/euf_nutshell",
   "license": "GPL-3.0-or-later",
   "authors":[
@@ -19,7 +19,8 @@
   },
   "require": {
     "php": ">=5.3",
-    "contao/core-bundle": "^4.9"
+    "contao/core-bundle": "^4.9",
+    "contao-components/installer": "^1.0"
   },
   "autoload":{
     "psr-4": {
@@ -28,6 +29,6 @@
   },
   "extra": {
     "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin",
-    "contao-component-dir": "web/test"
+    "contao-component-dir": "assets"
   }
 }
