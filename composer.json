@@ -19,7 +19,7 @@
   },
   "require": {
     "contao/core-bundle": "^4.9",
-    "nutshell-framework/nutshell": "dev-develop"
+    "nutshell-framework/contao-component-nutshell": "dev-develop"
   },
   "autoload":{
     "psr-4": {
