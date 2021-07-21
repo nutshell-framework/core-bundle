@@ -1,9 +1,9 @@
 {
-  "name": "erdmannfreunde/contao-nutshell-framework",
+  "name": "nutshell-framework/core-bundle",
   "description": "Base Framework for Contao CMS",
   "keywords": ["contao", "nutshell", "euf nutshell", "base framework"],
   "type": "contao-bundle",
-  "homepage": "https://github.com/ErdmannFreunde/euf_nutshell",
+  "homepage": "https://github.com/nutshell-framework",
   "license": "GPL-3.0-or-later",
   "authors":[
     {
@@ -14,8 +14,8 @@
   ],
   "support":{
     "email": "moin@erdmann-freunde.de",
-    "issues":"https://github.com/erdmannfreunde/contao-nutshell-framework/issues",
-    "source":"https://github.com/erdmannfreunde/contao-nutshell-framework"
+    "issues":"https://github.com/nutshell-framework/core-bundle/issues",
+    "source":"https://github.com/nutshell-framework/core-bundle"
   },
   "require": {
     "contao/core-bundle": "^4.9",
@@ -23,10 +23,10 @@
   },
   "autoload":{
     "psr-4": {
-      "ContaoNutshell\\Framework\\": "src/"
+      "Nutshell\\Framework\\": "src/"
     }
   },
   "extra": {
-    "contao-manager-plugin": "ContaoNutshell\\Framework\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Nutshell\\Framework\\ContaoManager\\Plugin"
   }
 }
