@@ -18,8 +18,7 @@
     "source":"https://github.com/nutshell-framework/core-bundle"
   },
   "require": {
-    "contao/core-bundle": "^4.9",
-    "nutshell-framework/nutshell": "dev-develop"
+    "contao/core-bundle": "^4.9"
   },
   "autoload":{
     "psr-4": {
