@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/tl_content.php" source-language="en">
+    <body>
+      <trans-unit id="tl_content.supline.0">
+        <source>Supline</source>
+      </trans-unit>
+      <trans-unit id="tl_content.supline.1">
+        <source>Text that should appear above the headline</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

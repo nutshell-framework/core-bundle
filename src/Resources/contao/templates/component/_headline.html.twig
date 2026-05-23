@@ -1,0 +1,25 @@
+{% extends "@Contao/component/_headline.html.twig" %}
+
+{#
+  Nutshell Framework: erweitert die Headline-Komponente um eine
+  optionale Dachzeile (supline), die oberhalb der eigentlichen
+  Überschrift gerendert wird.
+
+  Themes/Projekte können gezielt den Block "supline" überschreiben,
+  ohne den gesamten "headline_component"-Block neu zu definieren.
+#}
+
+{% block supline %}
+  {% set supline_data = data.supline|default('')|deserialize %}
+  {% set supline_text = supline_data is iterable ? supline_data.value|default('') : supline_data %}
+  {% set supline_tag  = supline_data is iterable ? supline_data.unit|default('h5') : 'h5' %}
+
+  {% if supline_text and supline_tag in ['h3', 'h4', 'h5'] %}
+    <{{ supline_tag }} class="headline__supline">{{ supline_text|insert_tag_raw }}</{{ supline_tag }}>
+  {% endif %}
+{% endblock %}
+
+{% block headline_component %}
+  {{ block('supline') }}
+  {{ parent() }}
+{% endblock %}
