@@ -2,24 +2,31 @@
 
 {#
   Nutshell Framework: erweitert die Headline-Komponente um eine
-  optionale Dachzeile (supline), die oberhalb der eigentlichen
-  Überschrift gerendert wird.
+  optionale Dachzeile (supline). Ist eine Dachzeile gesetzt, wird
+  die Überschrift kombiniert ausgegeben:
 
-  Themes/Projekte können gezielt den Block "supline" überschreiben,
-  ohne den gesamten "headline_component"-Block neu zu definieren.
+    <h2>
+      <span class="headline__supline">…</span>
+      <span class="headline__separator">: </span>
+      <span class="headline__main">…</span>
+    </h2>
+
+  Der Separator steht bewusst im Markup (nicht als CSS ::before),
+  damit Screenreader und sonstige Maschinen den optischen Trenner
+  zwischen Dachzeile und Haupt-Überschrift mitlesen können.
+
+  Ohne Dachzeile bleibt das Standardmarkup der Contao-Komponente
+  unverändert.
 #}
 
-{% block supline %}
-  {% set supline_data = data.supline|default('')|deserialize %}
-  {% set supline_text = supline_data is iterable ? supline_data.value|default('') : supline_data %}
-  {% set supline_tag  = supline_data is iterable ? supline_data.unit|default('h5') : 'h5' %}
+{% block headline_inner %}
+  {% set supline = data.supline|default('') %}
 
-  {% if supline_text and supline_tag in ['h3', 'h4', 'h5'] %}
-    <{{ supline_tag }} class="headline__supline">{{ supline_text|insert_tag_raw }}</{{ supline_tag }}>
+  {% if supline %}
+    <span class="headline__supline">{{ supline|insert_tag_raw }}</span>
+    <span class="headline__separator">: </span>
+    <span class="headline__main">{{ headline.text|insert_tag_raw }}</span>
+  {% else %}
+    {{ parent() }}
   {% endif %}
-{% endblock %}
-
-{% block headline_component %}
-  {{ block('supline') }}
-  {{ parent() }}
 {% endblock %}
